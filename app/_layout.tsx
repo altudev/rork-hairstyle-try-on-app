@@ -21,6 +21,7 @@ function RootLayoutNav() {
       },
     }}>
       <Stack.Screen name="index" options={{ headerShown: false }} />
+      <Stack.Screen name="home" options={{ headerShown: false }} />
       <Stack.Screen name="hairstyles" options={{ title: "Choose Hairstyle" }} />
       <Stack.Screen name="photo" options={{ title: "Upload Photo" }} />
       <Stack.Screen name="processing" options={{ title: "Processing", headerBackVisible: false }} />

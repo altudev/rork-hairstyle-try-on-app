@@ -110,6 +110,7 @@ export default function HomeScreen() {
   }, [fadeAnim, slideAnim, glowOpacity]);
 
   const handleGetStarted = () => {
+    console.log('Get Started pressed');
     Animated.sequence([
       Animated.timing(buttonScale, {
         toValue: 0.98,
@@ -122,7 +123,11 @@ export default function HomeScreen() {
         useNativeDriver: true,
       }),
     ]).start(() => {
-      router.push('/hairstyles');
+      try {
+        router.push('/home');
+      } catch (e) {
+        console.error('Navigation error', e);
+      }
     });
   };
 
@@ -200,7 +205,7 @@ export default function HomeScreen() {
 
             {/* CTA Section */}
             <Animated.View style={[styles.buttonContainer, { transform: [{ scale: buttonScale }] }]}>
-              <TouchableOpacity style={styles.getStartedButton} onPress={handleGetStarted}>
+              <TouchableOpacity testID="get-started-btn" style={styles.getStartedButton} onPress={handleGetStarted}>
                 <LinearGradient
                   colors={['#F97316', '#EA580C']}
                   style={styles.buttonGradient}
