@@ -161,7 +161,7 @@ export default function HomeScreen() {
               </View>
               
               <Text style={styles.brandName}>
-                Style<Text style={styles.brandNameAccent}>Me</Text>
+                Hair<Text style={styles.brandNameAccent}>fluencer</Text>
               </Text>
               
               <View style={styles.taglineContainer}>

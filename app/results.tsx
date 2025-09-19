@@ -27,7 +27,7 @@ export default function ResultsScreen() {
       // For web, create a download link
       const link = document.createElement('a');
       link.href = processedImage;
-      link.download = `hairstyle-${selectedHairstyle?.name}-${Date.now()}.jpg`;
+      link.download = `hairfluencer-${selectedHairstyle?.name}-${Date.now()}.jpg`;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -45,11 +45,11 @@ export default function ResultsScreen() {
       // Convert base64 to file and save
       const response = await fetch(processedImage);
       const blob = await response.blob();
-      const fileUri = `${FileSystem.documentDirectory}hairstyle-${Date.now()}.jpg`;
+      const fileUri = `${FileSystem.documentDirectory}hairfluencer-${Date.now()}.jpg`;
       
       // Save to device storage
       const asset = await MediaLibrary.createAssetAsync(fileUri);
-      await MediaLibrary.createAlbumAsync('Hairstyle Try On', asset, false);
+      await MediaLibrary.createAlbumAsync('Hairfluencer', asset, false);
       
       Alert.alert('Success', 'Image saved to your gallery!');
     } catch (error) {
@@ -63,8 +63,8 @@ export default function ResultsScreen() {
       if (navigator.share) {
         try {
           await navigator.share({
-            title: 'My New Hairstyle',
-            text: `Check out my new ${selectedHairstyle?.name} hairstyle!`,
+            title: 'My New Hairstyle from Hairfluencer',
+            text: `Check out my new ${selectedHairstyle?.name} hairstyle created with Hairfluencer!`,
           });
         } catch (error) {
           console.log('Share cancelled');

@@ -85,7 +85,7 @@ export default function HairstylesScreen() {
       <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
         <View style={styles.header}>
           <Text style={styles.title}>Choose Your Style</Text>
-          <Text style={styles.subtitle}>Select a hairstyle you'd like to try</Text>
+          <Text style={styles.subtitle}>Select a hairstyle you'd like to try with Hairfluencer</Text>
         </View>
 
         <View style={styles.grid}>

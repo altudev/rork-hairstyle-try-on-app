@@ -81,7 +81,7 @@ export default function PhotoScreen() {
         <View style={styles.header}>
           <Text style={styles.title}>Upload Your Photo</Text>
           <Text style={styles.subtitle}>
-            Take a clear photo of your face or choose one from your gallery
+            Take a clear photo of your face or choose one from your gallery for Hairfluencer
           </Text>
         </View>
 

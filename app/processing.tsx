@@ -129,7 +129,7 @@ export default function ProcessingScreen() {
 
         <Text style={styles.title}>Creating Your New Look</Text>
         <Text style={styles.subtitle}>
-          Our AI is working its magic to give you the perfect {selectedHairstyle?.name} hairstyle
+          Hairfluencer AI is working its magic to give you the perfect {selectedHairstyle?.name} hairstyle
         </Text>
 
         <View style={styles.progressContainer}>
